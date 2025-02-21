@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import { Platform } from 'react-native';
-
-import { useNavigation } from '@react-navigation/native';
-
-import { Background, Container, Logo, AreaInput, Input, ButtonText, Button, Link, LinkText } from './styles'
+import { Background, Container, Logo, AreaInput, Input, ButtonText, Button } from '../SignIn/styles'
 
 
 export default function SignIn() {
-  const navigation = useNavigation();
 
   const [email, setEmail] = useState('');
+  const [nome, setNome] = useState('');  
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
  return (
@@ -20,7 +17,19 @@ export default function SignIn() {
      >
 
 
-       <Logo source = {require('../../assets/Logo_oficial_CCB.png')} />
+       {/* <Logo source = {require('../../assets/Logo_oficial_CCB.png')} /> */}
+
+       <AreaInput>
+        <Input 
+        placeholder="Nome"
+        autoCorrect={false}
+        autoCapitalize="none"
+        value={nome}
+        onChangeText={text => setNome(text)}
+        />
+       </AreaInput>
+
+
 
 
        <AreaInput>
@@ -46,12 +55,12 @@ export default function SignIn() {
        </AreaInput>
 
        <Button>
-        <ButtonText>Entrar</ButtonText>
+        <ButtonText>Cadastrar</ButtonText>
        </Button>
 
-       <Link onPress={ () => navigation.navigate('SignUp') }>
-        <LinkText>Criar uma conta</LinkText>
-       </Link>
+       {/* <Link>
+        <LinkText>Esqueceu a senha?</LinkText>
+       </Link> */}
 
 
 
