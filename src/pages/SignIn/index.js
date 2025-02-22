@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
-import { Background, Container, Logo, AreaInput, Input, ButtonText, Button, Link, LinkText } from './styles'
+import { Background, Container, Logo, AreaInput, Input, ButtonText, Button, Link, LinkText, Div } from './styles'
 
 
 export default function SignIn() {
@@ -49,9 +49,12 @@ export default function SignIn() {
         <ButtonText>Entrar</ButtonText>
        </Button>
 
-       <Link onPress={ () => navigation.navigate('SignUp') }>
-        <LinkText>Criar uma conta</LinkText>
-       </Link>
+       <Div>
+        <Link onPress={ () => navigation.navigate('SignUp') }>
+          <LinkText>Criar uma conta</LinkText>
+        </Link>
+       </Div>
+
 
 
 

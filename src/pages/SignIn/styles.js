@@ -62,3 +62,14 @@ export const LinkText = styled.Text`
     font-size: 16px;
     font-weight: bold;
 `;
+export const Div = styled.View`
+  margin-top: 20px;
+  font-size: 16px;
+  color: #3498db;
+  border-radius:7px;
+  border: 1px solid #3498db;
+  width: 90%;
+  height:88px;
+  text-align: center;
+  align-items: center;
+`;
